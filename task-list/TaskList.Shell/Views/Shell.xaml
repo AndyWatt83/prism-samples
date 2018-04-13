@@ -1,0 +1,33 @@
+﻿<Window x:Class="TaskList.Shell.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskList.Shell"
+        mc:Ignorable="d"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        d:DataContext="{d:DesignInstance Type=local:ShellViewModel_Design, IsDesignTimeCreatable=True}"
+        Title="Shell" Height="600" Width="750">
+    <Window.Resources>
+        <Thickness x:Key="BorderThickness">3</Thickness>
+    </Window.Resources>
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Top" Height="40" BorderThickness="{DynamicResource BorderThickness}" BorderBrush="Red">
+            <StackPanel>
+                <TextBlock Text="Testing Region for VM binding / design time binding" />
+                <TextBlock Text="{Binding SomeText}" />
+            </StackPanel>
+        </Border>
+        <Border DockPanel.Dock="Left" Width="150" BorderThickness="{DynamicResource BorderThickness}" BorderBrush="Blue">
+            <ContentControl prism:RegionManager.RegionName="ProjectsRegion"/>
+        </Border>
+        <Border DockPanel.Dock="Left" Width="300" BorderThickness="{DynamicResource BorderThickness}" BorderBrush="Yellow">
+            <ContentControl prism:RegionManager.RegionName="TasksRegion"/>
+        </Border>
+        <Border DockPanel.Dock="Left" BorderThickness="{DynamicResource BorderThickness}" BorderBrush="Green">
+            <ContentControl prism:RegionManager.RegionName="DetailsRegion"/>
+        </Border>
+
+    </DockPanel>
+</Window>

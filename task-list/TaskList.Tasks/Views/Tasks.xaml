@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="TaskList.Tasks.Tasks"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaskList.Tasks"
+             mc:Ignorable="d" 
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             d:DataContext="{d:DesignInstance Type=local:TasksViewModel_Design, IsDesignTimeCreatable=True}"
+             d:DesignHeight="450" d:DesignWidth="300">
+    <StackPanel Background="White">
+        <TextBlock Text="TASKS" Margin="0,0,0,50"/>
+        <TextBlock Text="{Binding SomeText}"/>
+        <TextBlock Text="{Binding ClickCounter}"/>
+    </StackPanel>
+</UserControl>
