@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows;
+﻿using System.Windows;
+using System.ComponentModel.Composition;
 
-namespace TaskList.Shell
+namespace WireFrame.Shell
 {
     [Export()]
     public partial class Shell : Window
