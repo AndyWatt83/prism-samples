@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WireFrame.Shell"
         mc:Ignorable="d"
-        Title="Shell" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Shell" Height="450" Width="600">
+    <Window.Resources>
+        <Thickness x:Key="BtnMargin">5,5,5,0</Thickness>
+    </Window.Resources>
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Left" Width="150">
+            <Button Content="Navigation 1" Margin="{DynamicResource BtnMargin}" />
+            <Button Content="Navigation 2" Margin="{DynamicResource BtnMargin}" />
+            <Button Content="Navigation 3" Margin="{DynamicResource BtnMargin}" IsEnabled="False"/>
+            <Button Content="Navigation 4" Margin="{DynamicResource BtnMargin}" IsEnabled="False"/>
+        </StackPanel>
+        <Border BorderBrush="Blue" BorderThickness="1">
+            <TextBlock FontSize="40" FontWeight="Bold" Text="MAIN REGION" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Border>
+    </DockPanel>
 </Window>
